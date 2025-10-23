@@ -2,7 +2,7 @@ import { Link } from "react-scroll"
 import "./Nav.css"
 
 
-function Nav({isMenuOpen}) {
+function Nav({isMenuOpen, handleMenuClick}) {
 
     const items = ["home", "about", "services", "contact"]
 
@@ -14,6 +14,7 @@ function Nav({isMenuOpen}) {
                     to={item} 
                     key={index} 
                     className="nav-link"
+                    onClick={handleMenuClick}
                 >
                     {item}
                 </Link>
